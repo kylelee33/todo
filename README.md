@@ -2,6 +2,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Todo
 
-This is a simple Todo list app built with React that utilizes Local Storage. 
+This is a simple Todo list app built with React that utilizes LocalStorage and Material UI. 
 
 http://annoyed-spring.surge.sh

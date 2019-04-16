@@ -24,15 +24,8 @@ const styles = {
   }
 };
 
-const actionStyles = {
-  display: 'flex',
-  alignContent: 'space-between',
 
-}
 
-const pStyles = {
-  
-}
 
 const ToDoCard = (props) => {
   const { classes } = props;
@@ -42,7 +35,7 @@ const ToDoCard = (props) => {
     <Card className={classes.card}>
       <CardActionArea>
         <CardContent>
-          <Typography align="left" variant="h5">
+          <Typography align="left" variant="h6">
           <p style={{'text-decoration': props.todo.isCompleted ? 'line-through' : 'none'}}>{props.todo.text}</p>
           </Typography>
         </CardContent>

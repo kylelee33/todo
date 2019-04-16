@@ -1,9 +1,10 @@
 import React from 'react';
+import Typography from '@material-ui/core/Typography';
 
 const Title = () => {
     return (
         <div>
-            <h1>ToDo List</h1>
+            <Typography align="center" variant="h2">ToDo List</Typography>
         </div>
     );
 };

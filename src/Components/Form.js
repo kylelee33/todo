@@ -1,16 +1,20 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
 import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
 
 
 const Form = (props) => {
 
+	const [input, setInput] = useState('');
+
 	const inputStyles = {
 		borderRadius: '2px',
-		border: '1px solid #c0c0c0',
 		height: '30px',
 		width: '300px',
 		padding: '5px',
+		marginRight: '20px',
+		
 	}
 
 	const formStyles = {
@@ -24,20 +28,16 @@ const Form = (props) => {
 
 	}
     
-    let input = '';
-
-    
         return (
-            <form  onSubmit={(e)=> { props.addTodo(input.value, e); console.log(input.value); input.value = '';}}>
+            <form  onSubmit={(e)=> { props.addTodo(input, e); setInput('');}}>
 			<div style={formStyles}>
-				<input 
+				<TextField 
 					
-				    ref={node => {
-						input = node;
-					}}
+				    value={input}
 					placeholder="Add todo list item"
 					autoComplete="off"
 					style={inputStyles}
+					onChange={e => setInput(e.target.value)}
 					
 				/>
 

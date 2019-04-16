@@ -1,9 +1,4 @@
 import React, { Component } from 'react';
-import axios from './axios';
-
-
-
-
 
 import Form from './Components/Form';
 import ToDoList from './Components/ToDoList';
@@ -95,11 +90,11 @@ class App extends Component {
 
   render() {
 
-   
-
     return (
       <div className="App">
+        < br/>
         <Title />
+        <br />
         <Form addTodo={this.addTodo} clear={this.handleClearAll} state={this.state}></Form>
         <ToDoList todos={this.state.data} remove={this.handleRemove} complete={this.handleComplete}></ToDoList>
       </div>
